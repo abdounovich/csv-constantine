@@ -27,8 +27,8 @@
 
 <div class="bg-dark text-right p-2 m-2 rounded">
 
- <form  method="post" action="{{route('creneau.store')}}">
-    @csrf
+    <form  method="POST" action="{{ route('creneaus.update',$creneau->id) }}">
+        @csrf
 
 
 <div class="row p-2">
@@ -38,7 +38,7 @@
     </div>
 
     <div class="col col-10 ">
-        <input class="  form-control  " type="text" name="nom" id="nom">
+        <input class="  form-control  " value="{{$creneau->nom}}" type="text" name="nom" id="nom">
     </div>
 
 </div>
@@ -56,7 +56,7 @@
             $jours=array();
             $jours=['الجمعة','السبت','الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس'];
         @endphp
-        <select name="jour" class="custom-select form-group" >
+        <select name="jour" class="custom-select form-group"  >
             @foreach ($jours as $jour)
             <option value="{{$jour}}">{{$jour}}</option>
 
@@ -74,7 +74,7 @@
      <label  class="h4 text-white" for="debut" >البداية   :</label>
     </div>
     <div class="col col-10">
-       <input type="time" class="form-control" name="debut" id="debut"></div>
+       <input type="time" class="form-control" name="debut" value="{{$creneau->debut}}" id="debut"></div>
 
 </div>
 
@@ -86,7 +86,7 @@
      <label  class="h4 text-white" for="debut" >النهاية   :</label>
     </div>
     <div class="col col-10">
-       <input type="time" name="fin" class="form-control" id="fin"></div>
+       <input type="time" name="fin" value="{{$creneau->fin}}" class="form-control" id="fin"></div>
 
 </div>
 
@@ -113,7 +113,7 @@
 
 
 
-    <input class="  btn btn-success col col-12 p-2"   type="submit" value="إضافة">
+    <input class="  btn btn-success col col-12 p-2"   type="submit" value="حفظ التعديلات">
 
 </form>
 
@@ -124,47 +124,10 @@
 
 
 
-<div class="row">
 
-    @empty($creanaus)
- creanaus is "empty"...
-@endempty
+    
 
 
-
-
-<div>
-
-    @foreach ($groupes as $groupe)
-
-    {{-- <table class="table table-bordred">
-<tr class="bg-dark text-white">
-    <td colspan="5">{{$groupe->nom}}</td>
-</tr>
-
-@isset($creanaus)
-@foreach ($groupe->creanau as $creanau)
-<tr>
-    <td>{{$creanau->nom}}</td>
-    <td>{{$creanau->jour}}</td>
-    <td>{{$creanau->debut}}</td>
-    <td>{{$creanau->fin}}</td>
-    <td>{{$creanau->groupe->nom}}</td>
-
-</tr>
-@endforeach
-
-@endisset
-
-
-
-
-
-    </table>--}}
-    @endforeach 
-
-</div>
-</div>
 
 
 

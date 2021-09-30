@@ -48,7 +48,7 @@ Route::post('/registration2b',[RegistrationController::class,"registration2b"]);
 Route::post('/registration/edit/{id}',[RegistrationController::class,"update"]);
 
 
-Route::resource('creneau', CreneauController::class);
+Route::resource('creneaus.index', CreneauController::class);
 
 Route::get('test', function(){
 return view("test");
