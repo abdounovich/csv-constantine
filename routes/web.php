@@ -1,12 +1,14 @@
 <?php
 
+use App\Models\Groupe;
+use App\Models\Creneau;
 use App\Models\Registration;
+use Carbon\Traits\Converter;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GroupeController;
 use App\Http\Controllers\CreneauController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\RegistrationController;
-use Carbon\Traits\Converter;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +22,9 @@ use Carbon\Traits\Converter;
 */
 
 Route::get('/', function () {
-    $groupes=App\models\Groupe::all();
-    $crenaus=App\models\Creneau::all();
-    $registrations=App\models\Registration::all();
+    $groupes=Groupe::all();
+    $crenaus=Creneau::all();
+    $registrations=Registration::all();
     
     return view('home')->with("groupes",$groupes)->with("crenaus",$crenaus)->with("registrations",$registrations);
 });
