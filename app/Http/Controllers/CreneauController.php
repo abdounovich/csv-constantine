@@ -17,7 +17,7 @@ class CreneauController extends Controller
     {
         $groupes=Groupe::all();
         $creanaus=Creneau::all();
-        return view('creneau')->with('groupes',$groupes)->with('creanaus',$creanaus);
+        return view('creneaus.index')->with('groupes',$groupes)->with('creanaus',$creanaus);
     }
 
     /**
@@ -77,7 +77,9 @@ class CreneauController extends Controller
      */
     public function edit(Creneau $creneau)
     {
-        //
+        $groupes=Groupe::all();
+        return view('creneaus.edit',compact('creneau',"groupes"));
+
     }
 
     /**
@@ -89,7 +91,26 @@ class CreneauController extends Controller
      */
     public function update(Request $request, Creneau $creneau)
     {
-        //
+        $nom=$request->get("nom");
+        $debut=$request->get("debut");
+
+        $jour=$request->get("jour");
+
+        $fin=$request->get("fin");
+        $groupe_id=$request->get("groupe_id");
+
+
+        $creneau->nom=$nom;
+        $creneau->debut=$debut;
+
+        $creneau->fin=$fin;
+
+        $creneau->jour=$jour;
+        $creneau->groupe_id=$groupe_id;
+        $creneau->save();
+    
+        return redirect()->route("creneaus.index")->with('success','لقد تم حفظ التعديلات بنجاح');
+   
     }
 
     /**
@@ -100,6 +121,9 @@ class CreneauController extends Controller
      */
     public function destroy(Creneau $creneau)
     {
-        //
+        $creneau->delete();
+
+        return redirect()->route("creneaus.index")->with('success',' تمت عملية  الحدف  بنجاح');
+
     }
 }

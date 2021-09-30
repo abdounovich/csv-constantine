@@ -56,12 +56,12 @@
             $jours=array();
             $jours=['الجمعة','السبت','الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس'];
         @endphp
-        <select name="jour" class="custom-select form-group"  >
+        <select class="form-control" id="groupe" name="groupe">
             @foreach ($jours as $jour)
-            <option value="{{$jour}}">{{$jour}}</option>
-
-            @endforeach
-          </select>
+            <option value="{{$jour}}" @if($jour == $creneau->jour)
+  selected
+              @endif>{{$jour}}</option>
+        @endforeach              </select>
     </div>
 
 </div>
@@ -98,12 +98,18 @@
      <label  class="h4 text-white" for="fin" >المجموعة   :</label>
     </div>
     <div class="col col-10 ">
-        <select name="groupe" class="custom-select form-group" aria-label="Default select example">
+      
+      
+      
+        <select class="form-control" id="groupe" name="groupe">
             @foreach ($groupes as $groupe)
-            <option value="{{$groupe->id}}">{{$groupe->nom}}</option>
-
-            @endforeach
-          </select></div>
+            <option value="{{$groupe->id}}" @if($groupe->id == $creneau->groupe->id)
+  selected
+              @endif>{{$groupe->nom}}</option>
+        @endforeach              </select>
+      
+      
+      </div>
 
 </div>
 

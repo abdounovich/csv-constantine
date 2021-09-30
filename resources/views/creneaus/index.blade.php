@@ -27,7 +27,7 @@
 
 <div class="bg-dark text-right p-2 m-2 rounded">
 
- <form  method="post" action="{{route('creneau.store')}}">
+ <form  method="post" action="{{route('creneaus.store')}}">
     @csrf
 
 
@@ -154,9 +154,9 @@
                             {{$creanau->fin}}
                                 
                             </td>   
-                            <td ><a href="{{route('groupes.edit',$groupe->id)}}"  class="btn btn-warning">تعديـــل</a></td>
+                            <td ><a href="{{route('creneaus.edit',$creanau->id)}}"  class="btn btn-warning">تعديـــل</a></td>
                             <td>
-                            <form action="{{route('groupes.destroy',$groupe->id)}}" method="POST">
+                            <form action="{{route('creneaus.destroy',$creanau->id)}}" method="POST">
                                 @csrf
                 <input type="submit"  class="btn btn-danger" value="حذف">
                 
