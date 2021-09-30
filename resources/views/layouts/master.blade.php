@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta  name="viewport" content="width= {screenWidth}">
 
-
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta http-equiv="refresh" content="250">
 
