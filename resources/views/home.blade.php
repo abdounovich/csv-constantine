@@ -11,13 +11,6 @@
 
 
 
-@php
-    $groupes=App\models\Groupe::all();
-    $crenaus=App\models\Creneau::all();
-    $registrations=App\models\Registration::all();
-
-    @endphp
-
 
   
 <div class="container">

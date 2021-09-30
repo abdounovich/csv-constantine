@@ -20,7 +20,11 @@ use Carbon\Traits\Converter;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $groupes=App\models\Groupe::all();
+    $crenaus=App\models\Creneau::all();
+    $registrations=App\models\Registration::all();
+    
+    return view('home')->with("groupes",$groupes)->with("crenaus",$crenaus)->with("registrations",$registrations);
 });
 Route::resource('groupes', GroupeController::class);
 
