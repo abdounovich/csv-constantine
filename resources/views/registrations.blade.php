@@ -93,7 +93,7 @@
     
                  @foreach ($array as $item)
                     
-                 <span class="badge badge-success p-2 m-2"> {{$item}}</span>
+                 <p class="badge badge-success p-2 m-2"> {{$item}}</p>
               @endforeach 
     
     
@@ -112,8 +112,8 @@
     
                     @endif
                      </td>
-                     <td> <p><a class="text-warning btn btn-link" href="/badge/{{$registration->id}}">البادج </a></p>
-                        <a class="text-warning btn btn-link" href="/receipe/{{$registration->id}}">وصل إثبات الدفع </a></td>
+                     <td> <p><a class="text-warning btn btn-link text-center" href="/badge/{{$registration->id}}">البادج </a></p>
+                        <a class="text-warning btn btn-link text-center" href="/receipe/{{$registration->id}}"> إثبات الدفع </a></td>
             </tr>
        
     
