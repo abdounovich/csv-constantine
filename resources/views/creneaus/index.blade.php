@@ -130,6 +130,13 @@
 @forelse ($groupes as $groupe)
     
 
+@empty
+    
+
+
+
+
+@endforelse
 
 <div class="m-2 p-2">
     <table class="table table-bordred bg-dark">
@@ -179,13 +186,6 @@
 
 
 
-@empty
-    
-
-
-
-
-@endforelse
 
 
 
