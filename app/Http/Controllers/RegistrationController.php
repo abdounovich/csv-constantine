@@ -461,7 +461,7 @@ return back()->with('success', 'تم تعديل البيانات بنجاح');
   {
     $registration->delete();
 
-    return redirect()->route("/registrations")->with('success',' تمت عملية  الحدف  بنجاح');
+    return redirect('/registrations')->with('success',' تمت عملية  الحدف  بنجاح');
 
   }
 
