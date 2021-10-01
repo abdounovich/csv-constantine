@@ -27,7 +27,7 @@ class CreateRegistrationsTable extends Migration
 			$table->string('duree');
 			$table->string('prix_abonnement')->nullable();
             $table->string('prix_reste')->nullable();
-			$table->string('email');
+			$table->string('email')->nullable();
 			$table->string('sexe');
 			$table->string('date_naissance');
 			$table->string('badge_url')->nullable();
