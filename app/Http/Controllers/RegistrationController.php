@@ -459,7 +459,6 @@ return back()->with('success', 'تم تعديل البيانات بنجاح');
      */
   public function destroy(Registration $registration)
   {
-    $registration=Registration::find($id);
     $registration->delete();
 
     return redirect()->route("registrations")->with('success',' تمت عملية  الحدف  بنجاح');
