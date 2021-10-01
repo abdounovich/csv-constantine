@@ -452,16 +452,17 @@ return back()->with('success', 'تم تعديل البيانات بنجاح');
   }
 
   /**
-   * Remove the specified resource from storage.
-   *
-   * @param  int  $id
-   * @return Response
-   */
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Registration  $groupe
+     * @return \Illuminate\Http\Response
+     */
   public function destroy(Registration $registration)
   {
+    $registration=Registration::find($id);
     $registration->delete();
 
-    return redirect()->route("groupes.index")->with('success',' تمت عملية  الحدف  بنجاح');
+    return redirect()->route("registrations")->with('success',' تمت عملية  الحدف  بنجاح');
 
   }
 
