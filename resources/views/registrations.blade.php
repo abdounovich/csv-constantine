@@ -72,7 +72,7 @@
                 @foreach ($registrations  as $registration)
     <tbody>
        <tr>
-                <td>{{$loop->index}}</td>
+                <td>{{$loop->index+1}}</td>
                <td> <a  class="text-white" href="registration/{{$registration->id}}">{{$registration->nom}} </a></td>
                 <td>{{$registration->prenom}}</td>
                 <td>{{$registration->date_naissance}}</td>

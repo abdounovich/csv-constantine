@@ -73,7 +73,7 @@
 @foreach ($groupes as $groupe)
 <tbody class="text-white text-center">
 <tr>
-        <td>{{$loop->index}}</td>
+        <td>{{$loop->index+1}}</td>
         <td>{{$groupe->nom}}</td>
         <td><a href="{{route('groupes.edit',$groupe->id)}}"  class="btn btn-warning">تعديـــل</a>
             <td ><form action="{{route('groupes.destroy',$groupe->id)}}" method="POST">
