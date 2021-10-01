@@ -25,6 +25,13 @@
     </div>
 @endif
 
+
+<div><form action="{{route('registrations.destroy',$registration->id)}}" method="POST">
+    @csrf
+<input type="submit"  class="btn btn-danger" value="حذف">
+
+    @method('DELETE')
+</form></div>
 <div class="bg-dark p-2 m-2 text-right">
 
  <form  method="post" action="/registration/edit/{{$registration->id}}">

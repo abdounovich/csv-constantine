@@ -457,8 +457,11 @@ return back()->with('success', 'تم تعديل البيانات بنجاح');
    * @param  int  $id
    * @return Response
    */
-  public function destroy($id)
+  public function destroy(Registration $registration)
   {
+    $registration->delete();
+
+    return redirect()->route("groupes.index")->with('success',' تمت عملية  الحدف  بنجاح');
 
   }
 
