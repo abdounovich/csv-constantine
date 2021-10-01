@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Groupe extends Model
 {
+
+    protected $fillable = ['nom'];   
+    
     use HasFactory;
 
 
