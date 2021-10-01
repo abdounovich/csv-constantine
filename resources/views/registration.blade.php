@@ -26,9 +26,9 @@
 @endif
 
 
-<div><form action="{{route('registrations.destroy',$registration->id)}}" method="POST">
+<div class="text-right"><form action="{{route('registrations.destroy',$registration->id)}}" method="POST">
     @csrf
-<input type="submit"  class="btn btn-danger" value="حذف">
+<input type="submit"  class="btn btn-danger text-right mr-2" value="  حذف المشترك ">
 
     @method('DELETE')
 </form></div>

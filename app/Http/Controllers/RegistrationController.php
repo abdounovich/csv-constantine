@@ -223,10 +223,12 @@ $registration->documents=$documents;
 $texte="";
 $telephone="";
 if ($registration->telephone="NA") {
-  $telephon=$registration->telephone_pere;
+  $telephone=$registration->telephone_pere;
 
-$text="هاتف الأب";} else {$text=" الهاتف";
-  $telephon=$registration->telephone;
+$text="هاتف الأب";} 
+else {
+  $text=" الهاتف";
+  $telephone=$registration->telephone;
 
 }
 
