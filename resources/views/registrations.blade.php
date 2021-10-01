@@ -112,7 +112,7 @@
     
                     @endif
                      </td>
-                     <td> <a class="text-warning btn btn-link" href="/badge/{{$registration->id}}">البادج </a>
+                     <td> <p><a class="text-warning btn btn-link" href="/badge/{{$registration->id}}">البادج </a></p>
                         <a class="text-warning btn btn-link" href="/receipe/{{$registration->id}}">وصل إثبات الدفع </a></td>
             </tr>
        
