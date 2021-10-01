@@ -222,7 +222,7 @@ $registration->date_naissance=$date_naissance;
 $registration->documents=$documents;
 $texte="";
 $telephone="";
-if ($registration->telephone="NA") {
+if ($registration->telephone=="NA") {
   $telephone=$registration->telephone_pere;
 
 $text="هاتف الأب";} 
