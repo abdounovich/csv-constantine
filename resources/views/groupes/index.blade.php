@@ -96,10 +96,6 @@
 </div>
 
 
-@empty
-    <div class="h3 text-white bg-dark mx-2  text-center mt-4 p-4">لا يوجد أي مجموعة</div>
-@endforelse
-
 
 
 
