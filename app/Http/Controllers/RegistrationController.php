@@ -230,9 +230,10 @@ else {
   $text=" الهاتف";
   $telephone=$registration->telephone;
 
-}
-$registration->badge_url="badge/".$registration->id;
+}$registration->save();
 
+$registration=Registration::find($registration->id);
+$registration->badge_url="badge/".$registration->id;
 $registration->save();
 // $html_variable="";
 // foreach ($registration->groupe->creanau as $creanau) {
