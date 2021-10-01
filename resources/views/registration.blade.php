@@ -38,7 +38,7 @@
  <form  method="post" action="/registration/edit/{{$registration->id}}">
     @csrf
 
-    @method("PUT")
+
 
 <div class="row m-2">
 
