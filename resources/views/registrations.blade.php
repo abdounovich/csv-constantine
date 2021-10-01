@@ -59,7 +59,6 @@
                 <th>الإسم</th>
                 <th>اللقب</th>
                 <th>تاريخ الميلاد</th>
-                <th> العنوان </th>
     
                 <th>الفوج</th>
     
@@ -76,7 +75,6 @@
                <td> <a  class="text-white" href="registration/{{$registration->id}}">{{$registration->nom}} </a></td>
                 <td>{{$registration->prenom}}</td>
                 <td>{{$registration->date_naissance}}</td>
-                <td>{{$registration->address}}</td>
     
                 <td>           <span class="badge badge-pill badge-primary"> {{$registration->groupe->nom}}</span>
     
