@@ -232,7 +232,6 @@ else {
 
 }$registration->save();
 
-$registration=Registration::find($registration->id);
 $registration->badge_url="badge/".$registration->id;
 $registration->save();
 // $html_variable="";
