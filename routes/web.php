@@ -37,15 +37,15 @@ Route::resource('registrations', RegistrationController::class);
 Route::get('/registration1',[RegistrationController::class,"registration1"]);
 Route::get('/registration/{id}',[RegistrationController::class,"show"]);
 
-Route::post('/registration1',[RegistrationController::class,"registration2"]);
+Route::post('/registration1',[RegistrationController::class,"registration2",'https' => true]);
 
 
-Route::post('/registration2a',[RegistrationController::class,"registration2a"]);
+Route::post('/registration2a',[RegistrationController::class,"registration2a",'https' => true]);
 
 
-Route::post('/registration2b',[RegistrationController::class,"registration2b"]);
+Route::post('/registration2b',[RegistrationController::class,"registration2b",'https' => true]);
 
-Route::post('/registration/edit/{id}',[RegistrationController::class,"update"]);
+Route::post('/registration/edit/{id}',[RegistrationController::class,"update",'https' => true]);
 
 
 Route::resource('creneaus', CreneauController::class);
