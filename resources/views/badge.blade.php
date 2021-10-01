@@ -106,7 +106,7 @@ $telephone=$registration->telephone_pere;
 } 
 
 else {$text=" الهاتف";
-$telephon=$registration->telephone;
+$telephone=$registration->telephone;
 
 }
 @endphp
