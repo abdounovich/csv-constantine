@@ -4,6 +4,7 @@ use App\Models\Groupe;
 use App\Models\Creneau;
 use App\Models\Registration;
 use Carbon\Traits\Converter;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GroupeController;
 use App\Http\Controllers\CreneauController;
@@ -69,3 +70,4 @@ $registration=Registration::find($id);
             
             });
                
+            URL::forceScheme('https');
