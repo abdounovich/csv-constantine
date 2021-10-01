@@ -33,7 +33,7 @@
 
 
     <div class="p-2 text-right" >
-     <label  class="h4 text-white m-2" for="fin" >إسم المجموعة  :</label>
+     <label  class="h4 text-white m-2" for="fin" >إسم الفوج  :</label>
   
     <input class="form-control my-4  p-2 " type="text" name="nom" id="nom">
 
@@ -59,7 +59,7 @@
     <thead class="thead-light text-center">
         <tr>
             <th>#</th>
-            <th>إسم المجموعة</th>
+            <th>إسم الفوج</th>
             <th></th>
             <th></th>
 

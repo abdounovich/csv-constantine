@@ -40,7 +40,7 @@ class GroupeController extends Controller
         $groupe=new Groupe();
         $groupe->nom=$nom;
         $groupe->save();
-         return redirect()->back()->with("success","تم إضافة المجموعة بنجاح ");
+         return redirect()->back()->with("success","تم إضافة الفوج بنجاح ");
 
     }
 

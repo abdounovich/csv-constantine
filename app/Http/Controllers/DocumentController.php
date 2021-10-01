@@ -41,7 +41,7 @@ class DocumentController extends Controller
         $document=new Document();
         $document->nom=$nom;
         $document->save();
-         return redirect()->back()->with("success","تم إضافة المجموعة بنجاح ");
+         return redirect()->back()->with("success","تم إضافة الفوج بنجاح ");
 
     }
     /**

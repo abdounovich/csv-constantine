@@ -65,8 +65,8 @@
 
 
             <a href="/registrations" class="col col-2  text-white btn btn-primary m-2 p-2" title="المسجلين" style="font-size: 60px"> <i class=" p-2 fa fa-address-card"></i></a>
-            <a href="/groupes" class=" col col-2 text-white btn btn-primary m-2 p-2" title="المجموعات" style="font-size: 60px"><i class=" p-2 fa fa-users"></i></a>
-            <a href="/creneaus" class=" col col-2 text-white btn btn-primary m-2 p-2" title="الأفواج" style="font-size: 60px"><i class=" p-2 fa fa-calendar-check-o"></i></a>
+            <a href="/groupes" class=" col col-2 text-white btn btn-primary m-2 p-2" title="الأفواج" style="font-size: 60px"><i class=" p-2 fa fa-users"></i></a>
+            <a href="/creneaus" class=" col col-2 text-white btn btn-primary m-2 p-2" title="الحصص" style="font-size: 60px"><i class=" p-2 fa fa-calendar-check-o"></i></a>
             <a href="/documents" class=" col col-2 text-white btn btn-primary m-2 p-2" title="الوثائق" style="font-size: 60px"><i class=" p-2 fa fa-file-text-o"></i></a>
 
             <a href="/settings" class="col col-2  text-white btn btn-primary  m-2 p-2" title="الإعدادات" style="font-size: 60px"> <i class=" p-2 fa fa-wrench"></i></a>

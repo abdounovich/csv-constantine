@@ -53,7 +53,7 @@ class CreneauController extends Controller
 
 
             $creneau->save();
-             return redirect()->back()->with("success","تم إضافة الفوج بنجاح ");
+             return redirect()->back()->with("success","تم إضافة الحصة بنجاح ");
 
         }
     }

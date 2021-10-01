@@ -141,7 +141,7 @@
 <div class="row m-2">
 
     <div class="col col-2 p-2">
-     <label  class="h4 text-white" for="fin" >المجموعة   :</label>
+     <label  class="h4 text-white" for="fin" >الفوج    :</label>
     </div>
     <div class="col col-10 p-2">
         <select name="groupe" class="custom-select form-group">
