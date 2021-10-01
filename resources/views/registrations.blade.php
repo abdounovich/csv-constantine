@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Clients')
+@section('title', 'المشتركين')
 
 
 
@@ -93,7 +93,7 @@
     
                  @foreach ($array as $item)
                     
-                 <span class="badge badge-success p-2"> {{$item}}</span>
+                 <span class="badge badge-success p-2 m-2"> {{$item}}</span>
               @endforeach 
     
     
