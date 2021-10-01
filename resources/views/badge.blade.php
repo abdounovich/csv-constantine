@@ -98,16 +98,14 @@ background-position: 0 -40px !important;
 @php
     $texte="";
 $telephone="";
-if ($registration->telephone="NA") {
+if ($registration->telephone=="NA") {
 
 $text="هاتف الأب";
 $telephone=$registration->telephone_pere;
-echo"1";
 } 
 
 else {$text=" الهاتف";
 $telephone=$registration->telephone;
-echo"2";
 }
 @endphp
 <div id="bodyDiv" >

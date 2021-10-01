@@ -30,7 +30,7 @@
  <form  method="post" action="{{route('creneaus.store')}}">
     @csrf
 
-
+@method("PUT")
 <div class="row p-2">
 
     <div class="col col-2  ">

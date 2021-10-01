@@ -86,6 +86,8 @@ class DocumentController extends Controller
      */
     public function destroy(Document $document)
     {
-        //
+        $document->delete();
+        return redirect()->back()->with("success","تم حذف الوثيقة بنجاح ");
+
     }
 }

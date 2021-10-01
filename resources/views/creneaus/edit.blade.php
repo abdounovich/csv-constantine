@@ -30,6 +30,7 @@
     <form  method="POST" action="{{ route('creneaus.update',$creneau->id) }}">
         @csrf
 
+        @method("PUT")
 
 <div class="row p-2">
 

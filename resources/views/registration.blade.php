@@ -27,6 +27,7 @@
 
 
 <div class="text-right"><form action="{{route('registrations.destroy',$registration->id)}}" method="POST">
+    
     @csrf
 <input type="submit"  class="btn btn-danger text-right mr-2" value="  حذف المشترك ">
 
@@ -37,6 +38,7 @@
  <form  method="post" action="/registration/edit/{{$registration->id}}">
     @csrf
 
+    @method("PUT")
 
 <div class="row m-2">
 
