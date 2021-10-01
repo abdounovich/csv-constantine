@@ -152,9 +152,9 @@ src="{{asset('images/csv_logo.png')}}" alt="">
 </div>
 </div>
 
-<div class="text-white bg-primary p-1 fixed-bande" >
-  <span class=" bg-primary text-white  m-2  ">tel :</span><span class="text-white text-right"> 0667725678 - 0560741104 </span>  |
- <span class=" bg-primary text-white  m-2  ">fb / </span><span class="text-white text-right">CVS Constantine </span>
+<div class="text-white bg-primary p-1 fixed-bande" style="font-size: 10px">
+  <span class=" bg-primary text-white    ">tel :</span><span class="text-white text-right">0667725678 - 0560741104 </span>  |
+ <span class=" bg-primary text-white  ">fb/</span><span class="text-white text-right">CVS Constantine</span>
 
 </div>
 
