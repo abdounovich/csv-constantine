@@ -51,6 +51,9 @@
 
 @forelse ($groupes as $groupe)
     
+@empty
+    <div class="h3 text-white bg-dark mx-2  text-center mt-4 p-4">لا يوجد أي مجموعة</div>
+@endforelse
 <div class="m-2 p-2">
     <table class="table table-bordred bg-dark">
     <thead class="thead-light text-center">
