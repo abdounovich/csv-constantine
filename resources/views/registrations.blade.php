@@ -62,8 +62,8 @@
     
                 <th>الفوج</th>
     
-                <th>  الوثائق المقدمة</th>
-                <th>   سعر الإشتراك</th>
+                <th>الوثائق </th>
+                <th>   مبلغ الإشتراك</th>
     <th></th>
     
             </tr>
@@ -91,7 +91,7 @@
     
                  @foreach ($array as $item)
                     
-                 <p class="badge badge-success p-2 m-2"> {{$item}}</p>
+                 <p class="badge badge-success p-2 "> {{$item}}</p>
               @endforeach 
     
     
