@@ -42,7 +42,7 @@
             <div class="h3 p-2 text-light   d-flex align-self-center"> الحصص     </div>
             <div class="h1 text-light  d-flex align-self-center">{{$crenaus->count()}}</div>
     
-            <a href="/crenaus" class=" text-deuxieme m-4 p-2 btn btn-dark  btn d-flex align-self-center">تصفح الجميع</a>
+            <a href="/creneaus" class=" text-deuxieme m-4 p-2 btn btn-dark  btn d-flex align-self-center">تصفح الجميع</a>
              </div>
             </div>
     </div>
