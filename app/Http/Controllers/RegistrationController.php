@@ -231,177 +231,176 @@ else {
   $telephone=$registration->telephone;
 
 }
+$registration->badge_url="badge/".$registration->id;
 
 $registration->save();
-$html_variable="";
-foreach ($registration->groupe->creanau as $creanau) {
-  $html_variable=$html_variable."<div class='text-right bg-primary  text-white my-2 p-2 rounded'> 
-  <span class='badge badge-dark p-2  '  style='width: 25% '>".$creanau->jour."</span> 
-  <span class='mr-2'>".$creanau->debut." | ".$creanau->fin."</span>  
-  </div>"
-  ;
+// $html_variable="";
+// foreach ($registration->groupe->creanau as $creanau) {
+//   $html_variable=$html_variable."<div class='text-right bg-primary  text-white my-2 p-2 rounded'> 
+//   <span class='badge badge-dark p-2  '  style='width: 25% '>".$creanau->jour."</span> 
+//   <span class='mr-2'>".$creanau->debut." | ".$creanau->fin."</span>  
+//   </div>"
+//   ;
 
   
-}
+// }
 
-$html = '
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+// $html = '
+//     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+//     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+//     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
    
 
-<div id="bodyDiv" >
-<div id="first">
-<img class=" " style=" position:relative;width:140px; height:90px;top:10px;left:-20px"
-width="100" height="100"  
-src="https://scontent.fczl2-1.fna.fbcdn.net/v/t1.15752-9/s2048x2048/69262527_687908988343433_3037938172139929600_n.png?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHxyjOV961QpYRWoBGcjB2JQgHznhELzlZCAfOeEQvOVqFBvqaa4kc-NGzfP2PG_VIr-OPNOFOMSepoOh8ovOLl&_nc_ohc=CRBmc5jevnAAX9ArxrP&_nc_ht=scontent.fczl2-1.fna&oh=a83e85ea823d904f22535eba4cd47311&oe=61743F62" alt="">
+// <div id="bodyDiv" >
+// <div id="first">
+// <img class=" " style=" position:relative;width:140px; height:90px;top:10px;left:-20px"
+// width="100" height="100"  
+// src="https://scontent.fczl2-1.fna.fbcdn.net/v/t1.15752-9/s2048x2048/69262527_687908988343433_3037938172139929600_n.png?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeHxyjOV961QpYRWoBGcjB2JQgHznhELzlZCAfOeEQvOVqFBvqaa4kc-NGzfP2PG_VIr-OPNOFOMSepoOh8ovOLl&_nc_ohc=CRBmc5jevnAAX9ArxrP&_nc_ht=scontent.fczl2-1.fna&oh=a83e85ea823d904f22535eba4cd47311&oe=61743F62" alt="">
 
-<div class=" ml-5 mr-2 ">
-
-
-<div  style=" position:relative; top:-60px; left:-30px;width: 100px;height:100px" class=" text-primary bg-white mr-5  border border-info text-center rounded " >
-<i class="fa fa-5x fa-user "></i>
-</div> 
-<div class="text-right  mb-2" style="margin-top: -25px">اللقب : <span class="text-primary  ml-3">  '.$registration->nom.' </span> 
-الإسم : <span class="text-primary"> '.$registration->prenom.'  </span> </div>
-<div class="text-right my-2">تاريخ الميلاد : <span class="text-primary"> '.$registration->date_naissance.'  </span> </div>
-
-<div class="text-right my-2">رقم الهاتف :<span class="text-primary"> '.$telephone.'  </span> </div>
-
-'.$html_variable.'
+// <div class=" ml-5 mr-2 ">
 
 
-</div>
+// <div  style=" position:relative; top:-60px; left:-30px;width: 100px;height:100px" class=" text-primary bg-white mr-5  border border-info text-center rounded " >
+// <i class="fa fa-5x fa-user "></i>
+// </div> 
+// <div class="text-right  mb-2" style="margin-top: -25px">اللقب : <span class="text-primary  ml-3">  '.$registration->nom.' </span> 
+// الإسم : <span class="text-primary"> '.$registration->prenom.'  </span> </div>
+// <div class="text-right my-2">تاريخ الميلاد : <span class="text-primary"> '.$registration->date_naissance.'  </span> </div>
+
+// <div class="text-right my-2">رقم الهاتف :<span class="text-primary"> '.$telephone.'  </span> </div>
+
+// '.$html_variable.'
 
 
+// </div>
 
 
 
 
 
-<div class="relative">
-<div class="absolute">
-<p class="fixed-feedback "> قسنطينة في  <span class="text-primary">'.$date = date("Y/m/d") .'</span></p>
-<p class="fixed-le "> ختم الجمعية </p>
-
-</div>
-</div>
-
-<div class="text-white bg-primary p-1 fixed-bande" >
-<span >0667725678 </span>  <i class="fa fa-phone  text-dark"></i>
-|
 
 
+// <div class="relative">
+// <div class="absolute">
+// <p class="fixed-feedback "> قسنطينة في  <span class="text-primary">'.$date = date("Y/m/d") .'</span></p>
+// <p class="fixed-le "> ختم الجمعية </p>
 
-<span class="mr-1" > CVS Constantine  </span>  <i class="fa fa-facebook text-dark mr-1"></i>
-</div>
+// </div>
+// </div>
 
-</div>';
+// <div class="text-white bg-primary p-1 fixed-bande" >
+// <span >0667725678 </span>  <i class="fa fa-phone  text-dark"></i>
+// |
+
+
+
+// <span class="mr-1" > CVS Constantine  </span>  <i class="fa fa-facebook text-dark mr-1"></i>
+// </div>
+
+// </div>';
     
-    $css = '
+//     $css = '
     
 
-    .relative {
-        margin: 0 auto;
-        position: relative;
-        width: 300px;
-      }
+//     .relative {
+//         margin: 0 auto;
+//         position: relative;
+//         width: 300px;
+//       }
       
-      .absolute {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 50px;
-      }
+//       .absolute {
+//         position: absolute;
+//         right: 0;
+//         top: 0;
+//         width: 50px;
+//       }
       
-      .fixed-feedback {
-        position: fixed;
-        top: 400px;
-        width: 90px;
-      }
+//       .fixed-feedback {
+//         position: fixed;
+//         top: 400px;
+//         width: 90px;
+//       }
       
-      .fixed-le {
-        position: fixed;
-        top: 410px;
-        width: 270px;
+//       .fixed-le {
+//         position: fixed;
+//         top: 410px;
+//         width: 270px;
         
-      }
+//       }
       
-      .fixed-bande {
-        position: fixed;
-        top: 452px;
-        width: 300px;
-      }
+//       .fixed-bande {
+//         position: fixed;
+//         top: 452px;
+//         width: 300px;
+//       }
       
       
-      @page {
-        size: 200mm 200mm portrait;
-        margin: 0;
-      }
-      @media print {
-        html, body {
-          width: 30mm;
-          height: 10mm;
-        }
-        /* ... the rest of the rules ... */
-      }
+//       @page {
+//         size: 200mm 200mm portrait;
+//         margin: 0;
+//       }
+//       @media print {
+//         html, body {
+//           width: 30mm;
+//           height: 10mm;
+//         }
+//         /* ... the rest of the rules ... */
+//       }
       
-      #bodyDiv{
-        direction: rtl;
-      width:79mm;
-      height:126mm;
-      margin:auto;
-      font-family: "Roboto", sans-serif; 
-      font-size: 14px;
-      font-weight: bold;
-      background-image: url( "https://png.pngtree.com/thumb_back/fw800/back_our/20190619/ourmid/pngtree-blue-minimalistic-geometric-education-academic-advertising-detail-page-vector-background-image_135064.jpg");
-      }
+//       #bodyDiv{
+//         direction: rtl;
+//       width:79mm;
+//       height:126mm;
+//       margin:auto;
+//       font-family: "Roboto", sans-serif; 
+//       font-size: 14px;
+//       font-weight: bold;
+//       background-image: url( "https://png.pngtree.com/thumb_back/fw800/back_our/20190619/ourmid/pngtree-blue-minimalistic-geometric-education-academic-advertising-detail-page-vector-background-image_135064.jpg");
+//       }
           
       
       
       
-      #first{
+//       #first{
       
-      width:79mm;
-      height:100mm;
-      }
-      #last{
+//       width:79mm;
+//       height:100mm;
+//       }
+//       #last{
       
-      width:79mm;
-      height:26mm;
-      }
-       ';
-    $google_fonts = "Roboto";
+//       width:79mm;
+//       height:26mm;
+//       }
+//        ';
+//     $google_fonts = "Roboto";
     
-    $data = array('html'=>$html,
-                 'css'=>$css,
-                 'google_fonts'=>$google_fonts);
+//     $data = array('html'=>$html,
+//                  'css'=>$css,
+//                  'google_fonts'=>$google_fonts);
     
-    $ch = curl_init();
+//     $ch = curl_init();
     
-    curl_setopt($ch, CURLOPT_URL, "https://hcti.io/v1/image");
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+//     curl_setopt($ch, CURLOPT_URL, "https://hcti.io/v1/image");
+//     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     
-    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+//     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
     
-    curl_setopt($ch, CURLOPT_POST, 1);
-    // Retrieve your user_id and api_key from https://htmlcsstoimage.com/dashboard
-    curl_setopt($ch, CURLOPT_USERPWD, "517c37dd-d6ef-45f7-a9a3-5aff4cfe4f6e" . ":" . "e295eff1-06a0-47f5-b2e0-b43cd63a452c");
+//     curl_setopt($ch, CURLOPT_POST, 1);
+//     // Retrieve your user_id and api_key from https://htmlcsstoimage.com/dashboard
+//     curl_setopt($ch, CURLOPT_USERPWD, "517c37dd-d6ef-45f7-a9a3-5aff4cfe4f6e" . ":" . "e295eff1-06a0-47f5-b2e0-b43cd63a452c");
     
-    $headers = array();
-    $headers[] = "Content-Type: application/x-www-form-urlencoded";
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+//     $headers = array();
+//     $headers[] = "Content-Type: application/x-www-form-urlencoded";
+//     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
     
-    $result = curl_exec($ch);
-    if (curl_errno($ch)) {
-     echo 'Error:' . curl_error($ch);
-    }
-    curl_close ($ch);
-    $res = json_decode($result,true);
-   $registration->find($registration->id);
-    $registration->badge_url=$res['url'];
-
-$registration->save();
+//     $result = curl_exec($ch);
+//     if (curl_errno($ch)) {
+//      echo 'Error:' . curl_error($ch);
+//     }
+//     curl_close ($ch);
+//     $res = json_decode($result,true);
+//    $registration->find($registration->id);
+// $registration->save();
 
 
 
