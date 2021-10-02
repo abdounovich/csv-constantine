@@ -277,7 +277,12 @@
         name="documents[]" id="documents[]" required>
         @foreach ($documents as $document)
             
-        <option value="{{$document->nom}}">{{$document->nom}}</option>
+        <option value="{{$document->nom}}">{{$document->nom}}
+        @if ($document==)
+            
+       
+            
+        @endif</option>
            @endforeach      
           
             </select>
