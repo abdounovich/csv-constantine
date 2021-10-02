@@ -278,11 +278,7 @@
         @foreach ($documents as $document)
             
         <option value="{{$document->nom}}">{{$document->nom}}
-        @if ($document==)
-            
-       
-            
-        @endif</option>
+       </option>
            @endforeach      
           
             </select>
