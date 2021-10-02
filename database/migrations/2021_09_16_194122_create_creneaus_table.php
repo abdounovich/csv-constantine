@@ -16,12 +16,17 @@ class CreateCreneausTable extends Migration
         Schema::create('creneaus', function (Blueprint $table) {
             $table->bigIncrements('id');
 			$table->timestamps();
+            $table->unsignedBigInteger('groupe_id')->nullable();
             $table->string('nom');
 			$table->string('jour');
 			$table->string('debut');
 			$table->string('fin');
-			$table->integer('groupe_id')->unsigned();
+            $table->foreign('groupe_id')
+            ->references('id')->on('groupes')
+            ->onDelete('cascade');
+          
         });
+      
     }
 
     /**

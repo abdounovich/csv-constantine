@@ -23,4 +23,6 @@ class Groupe extends Model
         return $this->hasMany(Registration::class);
     }
 
+ 
+
 }
