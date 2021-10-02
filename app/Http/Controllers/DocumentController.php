@@ -75,7 +75,11 @@ class DocumentController extends Controller
      */
     public function update(Request $request, Document $document)
     {
-        //
+        $nom=$request->get("nom");
+        $document->nom=$nom;
+        $document->save();
+    
+        return redirect()->route("documents.index")->with('success','لقد تم حفظ التعديلات بنجاح');
     }
 
     /**
