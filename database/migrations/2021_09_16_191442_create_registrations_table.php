@@ -35,6 +35,7 @@ class CreateRegistrationsTable extends Migration
 
             $table->foreign('groupe_id')
             ->references('id')->on('groupes')
+            ->constrained()
             ->onDelete('cascade');
         });
     }

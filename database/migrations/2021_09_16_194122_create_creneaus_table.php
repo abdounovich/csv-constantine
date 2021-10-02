@@ -23,6 +23,7 @@ class CreateCreneausTable extends Migration
 			$table->string('fin');
             $table->foreign('groupe_id')
             ->references('id')->on('groupes')
+            ->constrained()
             ->onDelete('cascade');
           
         });
