@@ -73,7 +73,7 @@
 @foreach ($documents as $document)
 <tbody class="text-white text-center">
 <tr>
-        <td>{{$document->id}}</td>
+        <td>{{$loop->index+1}}</td>
         <td>{{$document->nom}}</td>
         <td><a href="{{route('documents.edit',$document->id)}}"  class="btn btn-warning">تعديـــل</a>
             <td ><form action="{{route('documents.destroy',$document->id)}}" method="POST">

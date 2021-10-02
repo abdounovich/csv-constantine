@@ -57,7 +57,7 @@
             $jours=array();
             $jours=['الجمعة','السبت','الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس'];
         @endphp
-        <select class="form-control" id="groupe" name="groupe">
+        <select class="form-control" id="jour" name="jour">
             @foreach ($jours as $jour)
             <option value="{{$jour}}" @if($jour == $creneau->jour)
   selected
@@ -102,7 +102,7 @@
       
       
       
-        <select class="form-control" id="groupe" name="groupe">
+        <select class="form-control" id="groupe_id" name="groupe_id">
             @foreach ($groupes as $groupe)
             <option value="{{$groupe->id}}" @if($groupe->id == $creneau->groupe->id)
   selected

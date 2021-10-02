@@ -4,12 +4,12 @@ use App\Models\Groupe;
 use App\Models\Creneau;
 use App\Models\Registration;
 use Carbon\Traits\Converter;
-use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GroupeController;
 use App\Http\Controllers\CreneauController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\RegistrationController;
+use Illuminate\Support\Facades\URL;
 
 /*
 |--------------------------------------------------------------------------
