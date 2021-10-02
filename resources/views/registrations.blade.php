@@ -62,7 +62,11 @@
     
                 <th>الفوج</th>
     
-                <th>الوثائق </th>
+                <th>الوثائق <div class="mt-1">
+                    <a href="www.google.com"  target="_new"  class="btn bg-success text-center" id="btnSave">تحميل</a>
+                  
+                  </div>
+                  </th>
                 <th>   مبلغ الإشتراك</th>
     <th></th>
     

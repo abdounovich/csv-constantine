@@ -1,4 +1,4 @@
-
+{{-- 
 @php
     $registration=Registration::find(1);
 @endphp
@@ -145,9 +145,9 @@ src="https://scontent.fczl2-1.fna.fbcdn.net/v/t1.15752-9/s2048x2048/69262527_687
 </div>
 
 </div>
-</div>
+</div> --}}
 <div class="mt-1">
-  <a  class="btn bg-success text-center" id="btnSave">تحميل</a>
+  <a href="www.google.com"  target="_new"  class="btn bg-success text-center" id="btnSave">تحميل</a>
 
 </div>
 
@@ -166,21 +166,9 @@ src="https://scontent.fczl2-1.fna.fbcdn.net/v/t1.15752-9/s2048x2048/69262527_687
 <script>
 
 
-var element = $("#bodyDiv"); // global variable
-var getCanvas; // global variable
 
-    $("#btnSave").on('click', function () {
-         html2canvas(element, {
-         onrendered: function (canvas) {
-                $("#previewImage").append(canvas);
-                getCanvas = canvas;
-                var imgageData = getCanvas.toDataURL("image/png");
-    // Now browser starts downloading it instead of just showing it
-    var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
-    $("#btnSave").attr("download", "your_pic_name.png").attr("href", newData);
-             }
-         });
-    });
+
+  
 
   
 
