@@ -109,7 +109,7 @@ $('body').on('mousedown', function (ev) {
             console.log("d: " + d);
             if (d >= 200) {
                 location.reload();
-                $('body').append($('<img/>').attr('src', 'https://www.mormota.ro/skin/frontend/default/polysoft/images/spinner.gif'));
+                $('body').append($('<img/>').attr('src', 'https://c.tenor.com/I6kN-6X7nhAAAAAi/loading-buffering.gif'));
             }
             $('body').css('margin-top', d/4 + 'px');
         }
