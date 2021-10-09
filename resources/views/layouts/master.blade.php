@@ -61,7 +61,7 @@
        <div class="container  ">
             <div class="row ">
               <div class="col p-4 btn-group">
-                <a class=" col col-2 text-white btn btn-primary m-2 p-2 " style="font-size: 60px" title="الرئيسية"   href="/"><i class=" p-2 fa fa-home"></i> </a>
+                <a class=" col col-2 text-white btn btn-primary m-2 p-2 " onclick="alert('hello')" style="font-size: 60px" title="الرئيسية"   href="/"><i class=" p-2 fa fa-home"></i> </a>
 
 
             <a href="/registrations" class="col col-2  text-white btn btn-primary m-2 p-2" title="المسجلين" style="font-size: 60px"> <i class=" p-2 fa fa-address-card"></i></a>
