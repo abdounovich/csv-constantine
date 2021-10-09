@@ -97,36 +97,7 @@
 
 
       <script src="{{ asset('js/app.js') }}" type="text/js"></script>
-<script>
-var mouseY = 0;
-var startMouseY = 0;
-$('body').on('mousedown', function (ev) {
-    mouseY = ev.pageY;
-    startMouseY = mouseY;
-    $(document).on('mousemove', function (e) {
-        if (e.pageY > mouseY) {
-            var d = e.pageY - startMouseY;
-            console.log("d: " + d);
-            if (d >= 200) {
-                location.reload();
-                $('body').append($('<img/>').attr('src', 'https://c.tenor.com/I6kN-6X7nhAAAAAi/loading-buffering.gif'));
-            }
-            $('body').css('margin-top', d/4 + 'px');
-        }
-        else
-            $(document).unbind("mousemove");
 
-
-    });
-});
-$('body').on('mouseup', function () {
-    $('body').css('margin-top', '0px');
-    $(document).unbind("mousemove");
-});
-$('body').on('mouseleave', function () {
-    $('body').css('margin-top', '0px');
-    $(document).unbind("mousemove");
-});
-</script>
+ 
   </body>
 </html>
